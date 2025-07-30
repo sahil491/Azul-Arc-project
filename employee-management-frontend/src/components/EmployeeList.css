@@ -1,0 +1,163 @@
+.employee-list-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.employee-list-container h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.employee-list-container h1::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #007bff;
+  border-radius: 2px;
+}
+
+.add-employee-button {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 30px auto;
+  padding: 15px 30px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-employee-button:hover {
+  background-color: #218838;
+  transform: translateY(-3px);
+}
+
+.no-employees-message {
+  text-align: center;
+  font-size: 1.3em;
+  color: #777;
+  padding: 40px;
+  background-color: #e9ecef;
+  border-radius: 8px;
+  margin-top: 30px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.employee-cards-grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.employee-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.employee-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.employee-info strong {
+  display: block;
+  font-size: 1.6em;
+  color: #007bff;
+  margin-bottom: 8px;
+  word-break: break-word;
+}
+
+.employee-info span {
+  display: block;
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 5px;
+  word-break: break-word;
+}
+
+.employee-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.edit-button,
+.delete-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.edit-button {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.edit-button:hover {
+  background-color: #e0a800;
+  transform: translateY(-2px);
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+}
+.employee-photo-thumbnail {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 2px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.employee-card .employee-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.loading-text {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+}
